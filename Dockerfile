@@ -24,6 +24,5 @@ WORKDIR /usr/src/app
 
 RUN bundle install
 
-
 EXPOSE 3333
 CMD ["rails", "server"]
