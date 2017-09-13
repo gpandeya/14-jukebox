@@ -45,5 +45,12 @@ pipeline {
 '''
       }
     }
+    stage('Delpy to K8s') {
+      steps {
+        sh '''
+        envsubst <deployment.yaml | kubectl apply -f -
+'''
+      }
+    }
   }
 }
